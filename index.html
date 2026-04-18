@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Тур в Беларусь · Топ-10 мест · Агентство «Турист»</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f9f7f3;
+            color: #1e2b2f;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* Заголовок */
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            text-align: center;
+            color: #1e3d42;
+            margin-bottom: 1.2rem;
+            text-shadow: 2px 2px 0 rgba(190, 170, 140, 0.15);
+        }
+
+        h1 i {
+            color: #b56532;
+            font-size: 2.2rem;
+            margin-right: 8px;
+        }
+
+        /* Изображение */
+        .hero-image {
+            margin: 1.8rem 0 2.5rem;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 20px 30px -8px rgba(30, 43, 47, 0.2);
+            border: 1px solid rgba(220, 200, 170, 0.5);
+            background: #e0d7cb;
+        }
+
+        .hero-image img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            aspect-ratio: 16 / 7;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-image:hover img {
+            transform: scale(1.01);
+        }
+
+        /* Блок из двух текстовых колонок */
+        .text-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .text-block {
+            flex: 1 1 280px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(2px);
+            padding: 1.8rem 2rem;
+            border-radius: 28px;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.03), 0 2px 0 0 #d9cbbe inset, 0 -1px 0 0 #fdfbf9 inset;
+            border-left: 6px solid #b56532;
+            transition: all 0.2s;
+        }
+
+        .text-block.left {
+            border-left-color: #b56532;
+            background: #ffffffec;
+        }
+
+        .text-block.right {
+            border-left-color: #2f6b6e;
+            background: #ffffffec;
+        }
+
+        .text-block p {
+            font-size: 1.12rem;
+            font-weight: 400;
+            color: #1e2b2f;
+            margin-bottom: 0.8rem;
+        }
+
+        .text-block i {
+            margin-right: 6px;
+            color: #b56532;
+            opacity: 0.8;
+        }
+
+        .text-block.right i {
+            color: #2f6b6e;
+        }
+
+        .highlight {
+            font-weight: 600;
+            color: #1e3d42;
+        }
+
+        /* ===== БЛОК TELEGRAM (добавлен перед формой) ===== */
+        .telegram-block {
+            margin: 2.5rem 0 3rem;
+            background: linear-gradient(135deg, #1e3d42 0%, #2a5a61 100%);
+            border-radius: 40px;
+            padding: 2.2rem 2.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            box-shadow: 0 15px 30px -8px rgba(30, 60, 66, 0.3);
+            border: 1px solid #3d7a82;
+        }
+
+        .telegram-content {
+            flex: 2 1 300px;
+        }
+
+        .telegram-content h3 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .telegram-content h3 i {
+            color: #54a0ff;
+            font-size: 2.2rem;
+        }
+
+        .telegram-content p {
+            font-size: 1.15rem;
+            color: #e0eae8;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+
+        .telegram-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem 2rem;
+            margin-top: 0.5rem;
+        }
+
+        .telegram-feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #c6e0db;
+        }
+
+        .telegram-feature i {
+            color: #54a0ff;
+            font-size: 1.1rem;
+        }
+
+        .telegram-button {
+            flex: 0 0 auto;
+        }
+
+        .tg-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #54a0ff;
+            color: white;
+            font-weight: 700;
+            font-size: 1.3rem;
+            padding: 1.2rem 2.8rem;
+            border-radius: 60px;
+            text-decoration: none;
+            box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.25), 0 2px 0 0 #3a7bd5 inset;
+            transition: all 0.2s ease;
+            border: 1px solid #7ab2ff;
+            white-space: nowrap;
+        }
+
+        .tg-btn i {
+            font-size: 1.8rem;
+        }
+
+        .tg-btn:hover {
+            background: #3d8cff;
+            transform: translateY(-2px);
+            box-shadow: 0 18px 28px -8px #1a3a4a;
+        }
+
+        .tg-btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 8px 16px -4px #1e3d42;
+        }
+
+        /* ===== ТОП-10 МЕСТ ===== */
+        .top10-section {
+            margin: 4rem 0 3.5rem;
+        }
+
+        .section-title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #1e3d42;
+            margin-bottom: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 3px solid #b5653240;
+            padding-bottom: 0.8rem;
+        }
+
+        .section-title i {
+            color: #b56532;
+            font-size: 2.2rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #345e63;
+            margin-top: -1rem;
+            margin-bottom: 2.2rem;
+            font-weight: 400;
+        }
+
+        .places-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem 1.8rem;
+        }
+
+        .place-card {
+            background: #fffffffa;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 12px 24px -10px rgba(30, 43, 47, 0.12);
+            transition: transform 0.2s, box-shadow 0.25s;
+            border: 1px solid #e4d8cc;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .place-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 36px -12px rgba(50, 60, 40, 0.18);
+            border-color: #c9b6a2;
+        }
+
+        .card-img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            display: block;
+            background: #cdbcab;
+            border-bottom: 2px solid #b5653230;
+        }
+
+        .card-content {
+            padding: 1.5rem 1.3rem 1.6rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .place-number {
+            display: inline-block;
+            background: #2f6b6e;
+            color: white;
+            font-weight: 700;
+            font-size: 0.8rem;
+            padding: 0.2rem 0.9rem;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.7rem;
+            align-self: flex-start;
+            border: 1px solid #ffffff70;
+        }
+
+        .place-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1e3d42;
+            margin-bottom: 0.6rem;
+            line-height: 1.3;
+        }
+
+        .place-desc {
+            font-size: 0.98rem;
+            color: #2f4045;
+            margin-bottom: 1rem;
+            flex: 1;
+        }
+
+        .place-meta {
+            display: flex;
+            gap: 12px;
+            font-size: 0.85rem;
+            color: #5f6e72;
+            margin-top: 0.5rem;
+            border-top: 1px dashed #bcab9b;
+            padding-top: 0.9rem;
+        }
+
+        .place-meta i {
+            margin-right: 4px;
+            color: #b56532;
+        }
+
+        /* Форма заявки */
+        .booking-section {
+            background: linear-gradient(145deg, #e7dfd4 0%, #f1ebe4 100%);
+            padding: 2.5rem 2.2rem;
+            border-radius: 40px;
+            box-shadow: 0 12px 28px -6px rgba(60, 45, 30, 0.12), 0 1px 0 0 #fff9f0 inset;
+            border: 1px solid #d4c5b4;
+            margin-top: 1.5rem;
+        }
+
+        .form-header {
+            margin-bottom: 2rem;
+        }
+
+        .form-header h2 {
+            font-size: 2rem;
+            font-weight: 650;
+            color: #1e3d42;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .form-header h2 i {
+            color: #b56532;
+            font-size: 1.9rem;
+        }
+
+        .form-header p {
+            font-size: 1.1rem;
+            color: #2c494e;
+            margin-top: 8px;
+            font-weight: 500;
+        }
+
+        .booking-form {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            gap: 1.5rem 1rem;
+        }
+
+        .form-group {
+            flex: 1 1 220px;
+            min-width: 200px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            color: #345e63;
+            margin-bottom: 0.4rem;
+        }
+
+        .form-group label i {
+            margin-right: 5px;
+            font-size: 0.9rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            background: #fffffffa;
+            border: 1.5px solid #cdbcab;
+            border-radius: 48px;
+            outline: none;
+            transition: border 0.15s, box-shadow 0.15s;
+            box-shadow: inset 2px 4px 8px rgba(0,0,0,0.02);
+        }
+
+        .form-group input:focus {
+            border-color: #b56532;
+            box-shadow: 0 0 0 4px rgba(181, 101, 50, 0.15), inset 0 1px 4px #fff;
+        }
+
+        .form-group input::placeholder {
+            color: #9a9289;
+            font-weight: 300;
+            font-size: 0.95rem;
+        }
+
+        .submit-btn {
+            flex: 0 0 auto;
+            margin-top: 0.4rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #b56532;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+            padding: 0.9rem 2.8rem;
+            border: none;
+            border-radius: 60px;
+            box-shadow: 0 10px 18px -8px rgba(80, 45, 20, 0.3), 0 2px 0 0 #5f3a22 inset, 0 -1px 0 0 #e09e6f inset;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            letter-spacing: 0.5px;
+            border: 1px solid #d18b5c;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .btn i {
+            margin-right: 8px;
+        }
+
+        .btn:hover {
+            background: #9f5328;
+            box-shadow: 0 12px 20px -8px #5e3d28, 0 2px 0 0 #4e2f1b inset;
+            transform: translateY(-1px);
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 6px 10px -4px #4a3a2c, 0 2px 0 0 #4e2f1b inset;
+        }
+
+        .form-status {
+            margin-top: 1.2rem;
+            font-size: 1rem;
+            min-height: 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .status-success {
+            color: #1e6b5e;
+            background: #d4ede6;
+            padding: 0.5rem 1.5rem;
+            border-radius: 40px;
+            font-weight: 500;
+        }
+
+        .status-error {
+            color: #a13d3d;
+            background: #ffe1de;
+            padding: 0.5rem 1.5rem;
+            border-radius: 40px;
+            font-weight: 500;
+        }
+
+        .status-loading {
+            color: #345e63;
+        }
+
+        .footnote {
+            margin-top: 1.8rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #4a5e63;
+            opacity: 0.8;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .price-hint {
+            display: inline-block;
+            background: #2f6b6e20;
+            padding: 0.3rem 1.2rem;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #1e4b50;
+        }
+
+        /* ===== ПЛАВАЮЩАЯ КНОПКА TELEGRAM ===== */
+        .floating-telegram {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+        }
+
+        .floating-tg-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #54a0ff;
+            color: white;
+            padding: 14px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 8px 20px rgba(84, 160, 255, 0.4);
+            transition: all 0.25s;
+            border: 1px solid #7ab2ff;
+            backdrop-filter: blur(4px);
+        }
+
+        .floating-tg-btn i {
+            font-size: 1.8rem;
+        }
+
+        .floating-tg-btn:hover {
+            background: #3d8cff;
+            transform: scale(1.05);
+            box-shadow: 0 12px 28px rgba(84, 160, 255, 0.5);
+        }
+
+        .floating-tg-btn span {
+            white-space: nowrap;
+        }
+
+        .pulse-ring {
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #54a0ff40;
+            animation: pulse 2s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.9); opacity: 0.7; }
+            70% { transform: scale(1.5); opacity: 0; }
+            100% { transform: scale(0.9); opacity: 0; }
+        }
+
+        /* Адаптация */
+        @media (max-width: 680px) {
+            h1 { font-size: 2.2rem; }
+            .hero-image { border-radius: 20px; }
+            .hero-image img { aspect-ratio: 4 / 3; }
+            .text-block { padding: 1.5rem; }
+            .booking-section { padding: 1.8rem 1.5rem; }
+            .form-header h2 { font-size: 1.7rem; }
+            .btn { width: 100%; white-space: normal; }
+            .submit-btn { width: 100%; }
+            .section-title { font-size: 1.9rem; }
+            .places-grid { grid-template-columns: 1fr; }
+            .telegram-block { padding: 1.8rem; }
+            .tg-btn { white-space: normal; width: 100%; justify-content: center; }
+            .floating-telegram { bottom: 20px; right: 20px; }
+            .floating-tg-btn span { display: none; }
+            .floating-tg-btn { padding: 16px; border-radius: 50%; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 1.5rem 1rem; }
+            h1 { font-size: 1.9rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- 1. Заголовок -->
+    <h1>
+        <i class="fas fa-map-signs"></i> 
+        Тур в Беларусь от агентства «Турист»
+        <i class="fas fa-leaf" style="margin-left: 10px;"></i>
+    </h1>
+
+    <!-- 2. Изображение -->
+    <div class="hero-image">
+        <img 
+            src="photo/orig.jpg" 
+            alt="Мирский замок и озеро в Беларуси"
+            title="Беларусь: Мирский замок и голубые озёра"
+            loading="eager"
+        >
+    </div>
+    <div style="text-align: right; font-size: 0.75rem; margin-top: -1rem; margin-bottom: 1rem; color: #5f6e72; opacity: 0.7;">
+        <i class="fas fa-camera"></i> Мирский замок, Нарочанский край
+    </div>
+
+    <!-- 3. Два текстовых блока -->
+    <div class="text-row">
+        <div class="text-block left">
+            <p>
+                <i class="fas fa-chess-queen"></i> 
+                <span class="highlight">Вас ждёт незабываемая экскурсия в Мирский и Несвижский замки.</span> 
+                Древние парки, таинственные подземелья и зеркальные озёра перенесут вас в эпоху магнатов. 
+                Бесплатные дегустации крафтового пива, сыров и традиционного драника завершат ваш день яркими вкусами Беларуси.
+            </p>
+            <p style="margin-top: 0.5rem; font-style: italic; color: #4d5f63;">
+                <i class="fas fa-utensils"></i> Дегустация включена в стоимость!
+            </p>
+        </div>
+        <div class="text-block right">
+            <p>
+                <i class="fas fa-parachute-box"></i> 
+                <span class="highlight">А самые смелые туристы смогут отправиться на сплав по извилистой реке Нарочанка</span> 
+                и полетать на параплане над голубыми просторами самого большого озера Беларуси.
+            </p>
+            <p style="margin-top: 0.5rem;">
+                <i class="fas fa-water"></i> 
+                <i class="fas fa-feather-alt"></i> 
+                Ощути настоящую свободу!
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== НОВЫЙ БЛОК: ПРИГЛАШЕНИЕ В TELEGRAM ===== -->
+    <div class="telegram-block">
+        <div class="telegram-content">
+            <h3>
+                <i class="fab fa-telegram-plane"></i>
+                Подпишись на наш Telegram-бот
+            </h3>
+            <p>Получай горящие туры, акции и персональные предложения первым!</p>
+            <div class="telegram-features">
+                <div class="telegram-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Мгновенные уведомления о скидках</span>
+                </div>
+                <div class="telegram-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Бесплатные гайды по Беларуси</span>
+                </div>
+                <div class="telegram-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Поддержка 24/7 в чате</span>
+                </div>
+            </div>
+        </div>
+        <div class="telegram-button">
+            <a href="https://t.me/TouristBelarusBot" target="_blank" class="tg-btn" id="telegramMainBtn">
+                <i class="fab fa-telegram"></i>
+                Перейти в бот
+            </a>
+        </div>
+    </div>
+
+    <!-- ТОП-10 МЕСТ БЕЛАРУСИ -->
+    <div class="top10-section">
+        <div class="section-title">
+            <i class="fas fa-crown"></i> 
+            Топ-10 мест Беларуси
+            <span style="margin-left: auto; font-size: 1rem; font-weight: 400; background: #e4d9ce; padding: 0.2rem 1.2rem; border-radius: 30px;">
+                <i class="fas fa-star"></i> стоит посетить
+            </span>
+        </div>
+        <div class="section-subtitle">
+            <i class="fas fa-map-pin"></i> От замков до заповедных пущ — места, которые вдохновляют
+        </div>
+
+        <div class="places-grid">
+            <!-- Карточки мест (1-10) -->
+            <div class="place-card">
+                <img class="card-img" src="photo/Push.jpg" alt="Беловежская пуща">
+                <div class="card-content">
+                    <span class="place-number">#1</span>
+                    <div class="place-title">Беловежская пуща</div>
+                    <div class="place-desc">Древний лес, зубры, резиденция Деда Мороза. Объект ЮНЕСКО, вековые дубы и нетронутая природа.</div>
+                    <div class="place-meta"><i class="fas fa-tree"></i> Брестская обл. <i class="fas fa-hiking" style="margin-left: 8px;"></i> экотропы</div>
+                </div>
+            </div>
+            <div class="place-card">
+                <img class="card-img" src="photo/Zamok.jpg" alt="Мирский замок">
+                <div class="card-content">
+                    <span class="place-number">#2</span>
+                    <div class="place-title">Мирский замок</div>
+                    <div class="place-desc">Шедевр готики и ренессанса. Легенды о призраках, подземные ходы и живописный пруд.</div>
+                    <div class="place-meta"><i class="fas fa-fort-awesome"></i> Гродненская обл. <i class="fas fa-ghost"></i> ночные экскурсии</div>
+                </div>
+            </div>
+            <div class="place-card">
+                <img class="card-img" src="photo/Nesvej.png" alt="Несвижский замок">
+                <div class="card-content">
+                    <span class="place-number">#3</span>
+                    <div class="place-title">Несвижский замок</div>
+                    <div class="place-desc">Резиденция Радзивиллов, роскошные залы, парки и старейшая ратуша. Атмосфера магнатского величия.</div>
+                    <div class="place-meta"><i class="fas fa-landmark"></i> Минская обл. <i class="fas fa-music"></i> концерты</div>
+                </div>
+            </div>
+            <div class="place-card">
+                <img class="card-img" src="photo/Brest.jpg" alt="Брестская крепость">
+                <div class="card-content">
+                    <span class="place-number">#4</span>
+                    <div class="place-title">Брестская крепость</div>
+                    <div class="place-desc">Мемориал героизма, монумент «Мужество», руины и вечный огонь. Символ стойкости.</div>
+                    <div class="place-meta"><i class="fas fa-shield-alt"></i> Брест <i class="fas fa-history"></i> музей</div>
+                </div>
+            </div>
+            <div class="place-card">
+                <img class="card-img" src="photo/Naroch.jpg" alt="Озеро Нарочь">
+                <div class="card-content">
+                    <span class="place-number">#5</span>
+                    <div class="place-title">Озеро Нарочь</div>
+                    <div class="place-desc">«Белорусское море» — чистейшая вода, сосны, яхтинг и сплавы по Нарочанке.</div>
+                    <div class="place-meta"><i class="fas fa-water"></i> Мядельский р-н <i class="fas fa-sailboat"></i> отдых</div>
+                </div>
+            </div>
+            <div class="place-card">
+                <img class="card-img" src="photo/polock.jpg" alt="Софийский собор Полоцк">
+                <div class="card-content">
+                    <span class="place-number">#6</span>
+                    <div class="place-title">Полоцк</div>
+                    <div class="place-desc">Софийский собор, Спасо-Евфросиниевский монастырь, родина белорусского книгопечатания.</div>
+                    <div class="place-meta"><i class="fas fa-church"></i> Витебская обл. <i class="fas fa-book"></i> Франциск Скорина</div>
+                </div>
+            </div>
+            <div class="place-card">
+                <img class="card-img" src="photo/Grodno.jpg" alt="Гродно Коложа">
+                <div class="card-content">
+                    <span class="place-number">#7</span>
+                    <div class="place-title">Гродно</div>
+                    <div class="place-desc">Старый и Новый замки, Коложская церковь XII века, уютная пешеходная Советская.</div>
+                    <div class="place-meta"><i class="fas fa-chess-rook"></i> Гродненская обл. <i class="fas fa-coffee"></i> кафе</div>
+                </div>
+            </div>
+            <div class="place-card">
+                <img class="card-img" src="photo/lidski.png" alt="Лидский замок">
+                <div class="card-content">
+                    <span class="place-number">#8</span>
+                    <div class="place-title">Лидский замок</div>
+                    <div class="place-desc">Суровый замок Гедимина, рыцарские фестивали, анимация и средневековая атмосфера.</div>
+                    <div class="place-meta"><i class="fas fa-knight"></i> Лида <i class="fas fa-dragon"></i> легенды</div>
+                </div>
+            </div>
+            <div class="place-card">
+                <img class="card-img" src="photo/Brasla.jpg" alt="Браславские озера">
+                <div class="card-content">
+                    <span class="place-number">#9</span>
+                    <div class="place-title">Браславские озёра</div>
+                    <div class="place-desc">Национальный парк, холмы, десятки озёр. Идеально для каякинга и наблюдения за птицами.</div>
+                    <div class="place-meta"><i class="fas fa-dove"></i> Витебская обл. <i class="fas fa-campground"></i> кемпинг</div>
+                </div>
+            </div>
+            <div class="place-card">
+                <img class="card-img" src="photo/Hatan.jpg" alt="Мемориал Хатынь">
+                <div class="card-content">
+                    <span class="place-number">#10</span>
+                    <div class="place-title">Хатынь</div>
+                    <div class="place-desc">Трагический мемориал сожжённым деревням. Вечный звон и скорбь, память о войне.</div>
+                    <div class="place-meta"><i class="fas fa-dove"></i> Минская обл. <i class="fas fa-tree"></i> мемориал</div>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 2.2rem; text-align: right; font-style: italic; color: #345e63;">
+            <i class="fas fa-route"></i> и ещё десятки сокровищ — откройте Беларусь с «Туристом»
+        </div>
+    </div>
+
+    <!-- 4. Форма с интеграцией Google Sheets -->
+    <div class="booking-section">
+        <div class="form-header">
+            <h2>
+                <i class="fas fa-ticket-alt"></i> 
+                Оставьте заявку и забронируйте тур по минимальной цене!
+            </h2>
+            <p>
+                <i class="fas fa-tag"></i> 
+                Спецпредложение: <span class="price-hint"><i class="fas fa-ruble-sign"></i> от 15 900 ₽</span> 
+                <span style="margin-left: 12px;"><i class="far fa-calendar-check"></i> места на июнь–август</span>
+            </p>
+        </div>
+
+        <form id="bookingForm" class="booking-form" onsubmit="return false;">
+            <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> Имя</label>
+                <input type="text" id="name" name="name" placeholder="Александр" required>
+            </div>
+            <div class="form-group">
+                <label for="phone"><i class="fas fa-phone-alt"></i> Телефон</label>
+                <input type="tel" id="phone" name="phone" placeholder="+375 (29) 123-45-67" required>
+            </div>
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Почта</label>
+                <input type="email" id="email" name="email" placeholder="travel@example.com" required>
+            </div>
+            <div class="submit-btn">
+                <button type="submit" class="btn" id="submitBtn">
+                    <i class="fas fa-paper-plane"></i> Забронировать
+                </button>
+            </div>
+        </form>
+
+        <div id="formStatus" class="form-status">
+            <span><i class="fas fa-lock"></i> Ваши данные под защитой</span>
+            <span><i class="fas fa-check-circle"></i> Мгновенное подтверждение</span>
+        </div>
+    </div>
+
+    <div class="footnote">
+        <span><i class="fas fa-map-marker-alt"></i> Минск · Брест · Гродно</span>
+        <span><i class="fas fa-phone"></i> +375 (44) 7-888-999</span>
+        <span><i class="fas fa-clock"></i> 24/7 поддержка</span>
+        <span>© Агентство «Турист»</span>
+    </div>
+</div>
+
+<!-- ===== ПЛАВАЮЩАЯ КНОПКА TELEGRAM ===== -->
+<div class="floating-telegram">
+    <div class="pulse-ring"></div>
+    <a href="https://t.me/TouristBelarusBot" target="_blank" class="floating-tg-btn" id="telegramFloatBtn">
+        <i class="fab fa-telegram"></i>
+        <span>Задать вопрос в Telegram</span>
+    </a>
+</div>
+
+<script>
+    (function() {
+        "use strict";
+
+        // Конфигурация Telegram (ЗАМЕНИТЕ НА ВАШИ ДАННЫЕ)
+        const TELEGRAM_BOT_USERNAME = 'TouristBelarusBot'; // Без @
+        
+        // Функция для открытия Telegram
+        function openTelegram(event) {
+            event.preventDefault();
+            const url = `https://t.me/${TouristBelarusBot}`;
+            window.open(url, '_blank');
+        }
+
+        // Привязываем обработчики к кнопкам Telegram
+        const tgMainBtn = document.getElementById('telegramMainBtn');
+        const tgFloatBtn = document.getElementById('telegramFloatBtn');
+        
+        if (tgMainBtn) {
+            tgMainBtn.addEventListener('click', openTelegram);
+        }
+        if (tgFloatBtn) {
+            tgFloatBtn.addEventListener('click', openTelegram);
+        }
+
+        // Настройка Google Sheets (замените URL)
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycby206W_nMGQOnKQQ_06ZCU3raMdb6eQVbfU_1dOt82hWTqNbg8uzJYhZb-XQgL6AySv/exec";
+        
+        const form = document.getElementById('bookingForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const statusDiv = document.getElementById('formStatus');
+
+        function setStatus(message, type) {
+            statusDiv.innerHTML = '';
+            const msgSpan = document.createElement('span');
+            msgSpan.textContent = message;
+            if (type === 'success') {
+                msgSpan.className = 'status-success';
+                msgSpan.innerHTML = `<i class="fas fa-check-circle"></i> ${message}`;
+            } else if (type === 'error') {
+                msgSpan.className = 'status-error';
+                msgSpan.innerHTML = `<i class="fas fa-exclamation-circle"></i> ${message}`;
+            } else {
+                msgSpan.className = 'status-loading';
+                msgSpan.innerHTML = `<i class="fas fa-spinner fa-pulse"></i> ${message}`;
+            }
+            statusDiv.appendChild(msgSpan);
+            const lockSpan = document.createElement('span');
+            lockSpan.innerHTML = '<i class="fas fa-lock"></i> Ваши данные под защитой';
+            lockSpan.style.marginLeft = '16px';
+            statusDiv.appendChild(lockSpan);
+        }
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+
+            if (!name || !phone || !email) {
+                setStatus('Пожалуйста, заполните все поля', 'error');
+                return;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Отправка...';
+            setStatus('Отправляем данные...', 'loading');
+
+            const formData = new FormData();
+            formData.append('name', name);
+            formData.append('phone', phone);
+            formData.append('email', email);
+            formData.append('timestamp', new Date().toLocaleString('ru-RU'));
+
+            fetch(SCRIPT_URL, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === 'success') {
+                    setStatus(`✨ Спасибо, ${name}! Ваша заявка принята.`, 'success');
+                    form.reset();
+                    
+                    // Предложение подписаться на Telegram после успешной отправки
+                    setTimeout(() => {
+                        if (confirm('🎉 Хотите получать выгодные предложения в Telegram?')) {
+                            window.open(`https://t.me/${TouristBelarusBot}`, '_blank');
+                        }
+                    }, 1500);
+                } else {
+                    throw new Error(data.error || 'Ошибка сервера');
+                }
+            })
+            .catch(error => {
+                console.error('Ошибка:', error);
+                setStatus('❌ Не удалось отправить. Попробуйте позже или напишите нам в Telegram.', 'error');
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Забронировать';
+            });
+        });
+    })();
+</script>
+</body>
+</html>
